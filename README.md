@@ -1,3 +1,4 @@
+![CI](https://github.com/ParmeSimon/fablab/actions/workflows/ci.yml/badge.svg)
 # API FabLab
 
 API de prêt de matériel du FabLab associatif : imprimantes 3D, découpeuse laser, perceuses, ponceuses.

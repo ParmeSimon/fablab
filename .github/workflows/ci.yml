@@ -22,5 +22,3 @@ jobs:
       - run: ./mvnw -B -DskipTests package
       - uses: actions/upload-artifact@v7
         with: { name: app-jar, path: target/*.jar }
-  image: # au Ch.3
-    needs: test

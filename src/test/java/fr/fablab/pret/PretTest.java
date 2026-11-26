@@ -28,6 +28,12 @@ class PretTest {
     }
 
     @Test
+    void un_pret_de_15_jours_est_refuse() {
+        assertThatThrownBy(() -> Pret.creer("ADH-042", "IMP-3D-01", LUNDI, 15))
+                .isInstanceOf(DureeInvalide.class);
+    }
+
+    @Test
     void un_pret_de_0_jour_est_refuse() {
         assertThatThrownBy(() -> Pret.creer("ADH-042", "IMP-3D-01", LUNDI, 0))
                 .isInstanceOf(DureeInvalide.class);

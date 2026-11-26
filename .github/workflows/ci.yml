@@ -11,7 +11,11 @@ jobs:
       - run: ./mvnw -B verify
       - uses: actions/upload-artifact@v7
         if: always()
-        with: { name: rapports, path: target/site/jacoco }
+        with:
+          name: rapports
+          path: |
+            target/surefire-reports/
+            target/site/jacoco/
   package:
     needs: test
     runs-on: ubuntu-latest
